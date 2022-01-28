@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:background="#EAE4E4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llContent"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <ImageView
+                    android:id="@+id/imgPersonImage"
+                    android:layout_width="106dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:contentDescription="Image"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher" />
+
+                <RelativeLayout
+                    android:layout_width="215dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4.0">
+
+                    <TextView
+                        android:id="@+id/txtPersonName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:padding="4dp"
+                        android:text="Name of the person"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtPersonAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtPersonName"
+                        android:layout_marginTop="10dp"
+                        android:padding="4dp"
+                        android:text="Address"
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/callImage3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/favouriteImage"
+                    app:srcCompat="@drawable/ic_baseline_call_24" />
+
+                <ImageView
+                    android:id="@+id/favouriteImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    app:srcCompat="@drawable/ic_baseline_favorite_24" />
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/tractorDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/llContent"
+                android:layout_marginTop="0dp">
+
+                <TextView
+                    android:id="@+id/txtAboutTractor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="4dp"
+                    android:padding="10dp"
+                    android:text="Tractor Details"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/imageButton"
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_marginRight="10dp"
+                    android:background="#FAA220"
+                    android:gravity="left|center_vertical"
+                    android:text="Share"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtAboutTractor"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="247dp"
+                    android:layout_toStartOf="@+id/txtSizeAns"
+                    android:padding="5dp"
+                    android:text="Size"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtSizeAns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtAboutTractor"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:text="Size Answer"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtCompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtSize"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="169dp"
+                    android:layout_toStartOf="@+id/txtCompanyAns"
+                    android:padding="5dp"
+                    android:text="Company"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtCompanyAns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtSizeAns"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:text="Company Answer"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtVehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCompany"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="76dp"
+                    android:layout_toStartOf="@+id/txtVehicleAns"
+                    android:padding="5dp"
+                    android:text="Vehicle Number"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtVehicleAns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCompanyAns"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:text="Vehicle Number Answer"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtImplements"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtVehicle"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="144dp"
+                    android:layout_toStartOf="@+id/txtImplementsAns"
+                    android:padding="5dp"
+                    android:text="Implements"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtImplementsAns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtVehicleAns"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp"
+                    android:text="Implements Answer"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtImplementsAns2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtImplementsAns"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="5dp"
+                    android:text="Implements Answer"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtImplementsAns3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtImplementsAns2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    android:text="Implements Answer"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tractorPhotos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tractorDetails"
+                android:layout_marginTop="0dp">
+
+                <TextView
+                    android:id="@+id/txtPhotos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Photos"
+                    android:textSize="20sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:layout_below="@id/txtPhotos">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="175dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:background="#c1c1c1"
+                            android:src="@drawable/ic_launcher_background" />
+
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_width="175dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:background="#c1c1c1"
+                            android:src="@drawable/ic_launcher_background" />
+
+                        <ImageView
+                            android:id="@+id/img3"
+                            android:layout_width="175dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:background="#c1c1c1"
+                            android:src="@drawable/ic_launcher_background" />
+
+                        <ImageView
+                            android:id="@+id/img4"
+                            android:layout_width="175dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:background="#c1c1c1"
+                            android:src="@drawable/ic_launcher_background" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
+
